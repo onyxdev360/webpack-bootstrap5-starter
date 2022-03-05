@@ -47,6 +47,10 @@ module.exports = {
   // Determine how modules within the project are treated
   module: {
     rules: [
+      // Images: Copy image files to build folder
+      // Emits a separate file and exports the URL. Previously achievable by using file-loader
+      { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource' },
+
       // Fonts and SVGs: Inline files
       // Exports a data URI of the asset. Previously achievable by using url-loader
       { test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: 'asset/inline' },
