@@ -18,4 +18,28 @@ module.exports = merge(common, {
     compress: true,
     port: variables.port,
   },
+
+  module: {
+    rules: [
+      // Styles: Inject CSS into the head with source maps
+      {
+        test: /\.(sass|scss)$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader?url=false',
+            options: {
+              sourceMap: true,
+              importLoaders: 1,
+              modules: variables.enableCssModules,
+            },
+          },
+          { loader: 'postcss-loader', options: { sourceMap: true } },
+          { loader: 'sass-loader', options: { sourceMap: true } },
+        ],
+      },
+    ],
+  },
+
+  plugins: [],
 });
