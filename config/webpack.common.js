@@ -46,6 +46,10 @@ module.exports = {
 
   // Determine how modules within the project are treated
   module: {
-    rules: [],
+    rules: [
+      // Fonts and SVGs: Inline files
+      // Exports a data URI of the asset. Previously achievable by using url-loader
+      { test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: 'asset/inline' },
+    ],
   },
 };
