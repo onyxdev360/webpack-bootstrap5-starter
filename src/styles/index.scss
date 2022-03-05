@@ -1,19 +1,10 @@
-@import './utilities';
-
-@include font(
-  'Roboto',
-  '../assets/fonts/Roboto/Roboto-Regular',
-  400,
-  'normal',
-  'ttf'
-);
-@include font(
-  'Roboto-Bold',
-  '../assets/fonts/Roboto/Roboto-Bold',
-  700,
-  'bold',
-  'ttf'
-);
+@import './vendors/index.scss';
+@import './abstracts/index.scss';
+@import './base/index.scss';
+@import './layout/index.scss';
+@import './components/index.scss';
+@import './themes/index.scss';
+@import './pages/index.scss';
 
 body,
 html {
@@ -28,15 +19,4 @@ a {
 
 span {
   font-family: Roboto-Bold, Arial, Helvetica, sans-serif;
-}
-
-.demo {
-  height: 100%;
-  color: white;
-  background: url('../assets/img/pexels-pixabay-38537.jpg') center / cover
-    no-repeat fixed;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
