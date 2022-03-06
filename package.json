@@ -12,7 +12,8 @@
     "html5"
   ],
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js"
+    "start": "sassdoc ./src/styles && cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
+    "sassdoc": "sassdoc ./src/styles"
   },
   "author": "Travis Yeargin",
   "license": "MIT",

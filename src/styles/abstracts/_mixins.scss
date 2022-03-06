@@ -1,26 +1,16 @@
-// =============================================================================
-// String Replace
-// =============================================================================
-
-@function str-replace($string, $search, $replace: '') {
-  $index: str-index($string, $search);
-
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace +
-      str-replace(
-        str-slice($string, $index + str-length($search)),
-        $search,
-        $replace
-      );
-  }
-
-  @return $string;
-}
-
-// =============================================================================
-// Font Face
-// =============================================================================
-
+/// Import a font.
+///
+/// @group Font Helpers
+/// @author https://gist.github.com/jonathantneal
+///
+/// @param {String} $name - Name of the font.
+/// @param {String} $path - The path to locate the font.
+/// @param {Number} $weight - The weight of the font.
+/// @param {String} $style - The style of the font.
+///
+/// @example scss - Import Roboto-Regular font with 400 weight, normal style and .ttf extension
+///   @include font('Roboto', '../assets/fonts/Roboto/Roboto-Regular', 400, 'normal', 'ttf');
+///
 @mixin font(
   $name,
   $path,
