@@ -1,0 +1,10 @@
+{
+  "extends": ["tslint-config-airbnb"],
+  "rules": {
+    "prefer-array-literal": [true, { "allow-type-parameters": true }],
+    "import-name": [true, { "react": "React", "debug": "debugLib" }],
+    "max-line-length": [false],
+    "variable-name": [true, "allow-pascal-case"],
+    "no-boolean-literal-compare": false
+  }
+}

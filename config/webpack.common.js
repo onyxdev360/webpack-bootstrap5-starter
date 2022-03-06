@@ -53,7 +53,12 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'eslint-loader',
       },
-
+      {
+        enforce: 'pre',
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        loader: 'tslint-loader',
+      },
       // JavaScript: Use Babel to transpile JavaScript files
       { test: /\.js$/, use: ['babel-loader'] },
 
