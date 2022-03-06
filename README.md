@@ -1,10 +1,11 @@
-# Webpack HTML5 Starter
+# Webpack Bootstrap 5 Starter
 
 ## Goals
 
-Provide a simple starting point for creating a HTML 5 project:
+Provide a simple starting point for creating a HTML 5 project using Bootstrap 5 framework:
 
 - ✅ Webpack 5
+- ✅ Bootstrap 5
 - ✅ Linting
 - ✅ TypeScript support
 - ✅ SASS support (7-1 Architecture, sassdoc)
@@ -27,7 +28,7 @@ The project uses a common structure. The `config folder` contains a development 
 
 ```
 ...
-├─ webpack-html5-starter
+├─ webpack-bootstrap5-starter
 │  ├─ .babelrc.json
 │  ├─ .eslintrc.json
 │  ├─ .prettierrc.json
@@ -37,18 +38,8 @@ The project uses a common structure. The `config folder` contains a development 
 │  │  ├─ fonts
 │  │  │  └─ Roboto
 │  │  │     ├─ LICENSE.txt
-│  │  │     ├─ Roboto-Black.ttf
-│  │  │     ├─ Roboto-BlackItalic.ttf
 │  │  │     ├─ Roboto-Bold.ttf
-│  │  │     ├─ Roboto-BoldItalic.ttf
-│  │  │     ├─ Roboto-Italic.ttf
-│  │  │     ├─ Roboto-Light.ttf
-│  │  │     ├─ Roboto-LightItalic.ttf
-│  │  │     ├─ Roboto-Medium.ttf
-│  │  │     ├─ Roboto-MediumItalic.ttf
-│  │  │     ├─ Roboto-Regular.ttf
-│  │  │     ├─ Roboto-Thin.ttf
-│  │  │     └─ Roboto-ThinItalic.ttf
+│  │  │     └─ Roboto-Regular.ttf
 │  │  ├─ img
 │  │  │  ├─ favicon.png
 │  │  │  └─ pexels-pixabay-38537.jpg
@@ -61,6 +52,7 @@ The project uses a common structure. The `config folder` contains a development 
 │  │  ├─ webpack.dev.js
 │  │  └─ webpack.prod.js
 │  ├─ dist
+│  ├─ LICENSE
 │  ├─ package-lock.json
 │  ├─ package.json
 │  ├─ postcss.config.js
@@ -109,6 +101,98 @@ The project uses a common structure. The `config folder` contains a development 
 │  │  │  ├─ themes
 │  │  │  │  └─ index.scss
 │  │  │  └─ vendors
+│  │  │     ├─ bootstrap
+│  │  │     │  └─ scss
+│  │  │     │     ├─ bootstrap-grid.scss
+│  │  │     │     ├─ bootstrap-reboot.scss
+│  │  │     │     ├─ bootstrap-utilities.scss
+│  │  │     │     ├─ bootstrap.scss
+│  │  │     │     ├─ forms
+│  │  │     │     │  ├─ _floating-labels.scss
+│  │  │     │     │  ├─ _form-check.scss
+│  │  │     │     │  ├─ _form-control.scss
+│  │  │     │     │  ├─ _form-range.scss
+│  │  │     │     │  ├─ _form-select.scss
+│  │  │     │     │  ├─ _form-text.scss
+│  │  │     │     │  ├─ _input-group.scss
+│  │  │     │     │  ├─ _labels.scss
+│  │  │     │     │  └─ _validation.scss
+│  │  │     │     ├─ helpers
+│  │  │     │     │  ├─ _clearfix.scss
+│  │  │     │     │  ├─ _colored-links.scss
+│  │  │     │     │  ├─ _position.scss
+│  │  │     │     │  ├─ _ratio.scss
+│  │  │     │     │  ├─ _stacks.scss
+│  │  │     │     │  ├─ _stretched-link.scss
+│  │  │     │     │  ├─ _text-truncation.scss
+│  │  │     │     │  ├─ _visually-hidden.scss
+│  │  │     │     │  └─ _vr.scss
+│  │  │     │     ├─ mixins
+│  │  │     │     │  ├─ _alert.scss
+│  │  │     │     │  ├─ _backdrop.scss
+│  │  │     │     │  ├─ _border-radius.scss
+│  │  │     │     │  ├─ _box-shadow.scss
+│  │  │     │     │  ├─ _breakpoints.scss
+│  │  │     │     │  ├─ _buttons.scss
+│  │  │     │     │  ├─ _caret.scss
+│  │  │     │     │  ├─ _clearfix.scss
+│  │  │     │     │  ├─ _color-scheme.scss
+│  │  │     │     │  ├─ _container.scss
+│  │  │     │     │  ├─ _deprecate.scss
+│  │  │     │     │  ├─ _forms.scss
+│  │  │     │     │  ├─ _gradients.scss
+│  │  │     │     │  ├─ _grid.scss
+│  │  │     │     │  ├─ _image.scss
+│  │  │     │     │  ├─ _list-group.scss
+│  │  │     │     │  ├─ _lists.scss
+│  │  │     │     │  ├─ _pagination.scss
+│  │  │     │     │  ├─ _reset-text.scss
+│  │  │     │     │  ├─ _resize.scss
+│  │  │     │     │  ├─ _table-variants.scss
+│  │  │     │     │  ├─ _text-truncate.scss
+│  │  │     │     │  ├─ _transition.scss
+│  │  │     │     │  ├─ _utilities.scss
+│  │  │     │     │  └─ _visually-hidden.scss
+│  │  │     │     ├─ utilities
+│  │  │     │     │  └─ _api.scss
+│  │  │     │     ├─ vendor
+│  │  │     │     │  └─ _rfs.scss
+│  │  │     │     ├─ _accordion.scss
+│  │  │     │     ├─ _alert.scss
+│  │  │     │     ├─ _badge.scss
+│  │  │     │     ├─ _breadcrumb.scss
+│  │  │     │     ├─ _button-group.scss
+│  │  │     │     ├─ _buttons.scss
+│  │  │     │     ├─ _card.scss
+│  │  │     │     ├─ _carousel.scss
+│  │  │     │     ├─ _close.scss
+│  │  │     │     ├─ _containers.scss
+│  │  │     │     ├─ _dropdown.scss
+│  │  │     │     ├─ _forms.scss
+│  │  │     │     ├─ _functions.scss
+│  │  │     │     ├─ _grid.scss
+│  │  │     │     ├─ _helpers.scss
+│  │  │     │     ├─ _images.scss
+│  │  │     │     ├─ _list-group.scss
+│  │  │     │     ├─ _mixins.scss
+│  │  │     │     ├─ _modal.scss
+│  │  │     │     ├─ _nav.scss
+│  │  │     │     ├─ _navbar.scss
+│  │  │     │     ├─ _offcanvas.scss
+│  │  │     │     ├─ _pagination.scss
+│  │  │     │     ├─ _placeholders.scss
+│  │  │     │     ├─ _popover.scss
+│  │  │     │     ├─ _progress.scss
+│  │  │     │     ├─ _reboot.scss
+│  │  │     │     ├─ _root.scss
+│  │  │     │     ├─ _spinners.scss
+│  │  │     │     ├─ _tables.scss
+│  │  │     │     ├─ _toasts.scss
+│  │  │     │     ├─ _tooltip.scss
+│  │  │     │     ├─ _transitions.scss
+│  │  │     │     ├─ _type.scss
+│  │  │     │     ├─ _utilities.scss
+│  │  │     │     └─ _variables.scss
 │  │  │     └─ index.scss
 │  │  ├─ templates
 │  │  │  └─ template.html
@@ -145,6 +229,10 @@ The project uses a common structure. The `config folder` contains a development 
 [tslint](https://www.npmjs.com/package/tslint)
 [tslint-config-airbnb](https://www.npmjs.com/package/tslint-config-airbnb)
 [tslint-loader](https://www.npmjs.com/package/tslint-loader)
+
+### CSS Frameworks
+
+[bootstrap](https://www.npmjs.com/package/bootstrap)
 
 ### CSS/SASS processing
 
@@ -188,7 +276,7 @@ The project uses a common structure. The `config folder` contains a development 
 
 ## Project configuration
 
-The goal of this starter project is to provide a simple starting point for creating an HTML web project using Webpack.
+The goal of this starter project is to provide a simple starting point for creating an HTML web project using Webpack 5 and Bootstrap 5.
 
 In `./src/templates` you will find a sole file `template.html`.
 
@@ -261,6 +349,12 @@ Typescript is supported without any additional changes. See `./src/index.ts` to 
 ### SASS support
 
 Sass is supported in the configuration. Place SASS files in `./src/styles`.
+
+#### SASS and Bootstrap 5
+
+The Bootstrap project makes SASS source files available for distribution. Importing Bootstrap 5 via SASS allows Bootstrap to be used in a web project while allowing you to retain some control over the design. Many developers prefer to use Bootstrap to take advantage of the grid system provided by Bootstrap while ignoring the many additional components provided by Bootstrap. The SASS files required to take that approach are provided in the source files. Simply import `./src/styles/vendors/bootstrap/scss/bootstrap-grid.scss` instead of importing `./src/styles/vendors/bootstrap/scss/bootstrap.scss`. If you started the project using the full Bootstrap, be sure to remove any ceremonial CSS classes that you may have included in your initial design and replace them with your own design classes. The earlier that this decision is made, the less work you have to do later.
+
+> The use of SASS also allows for easier customization of Bootstrap 5. See https://getbootstrap.com/docs/5.0/customize/sass/
 
 #### SASS architecture
 
