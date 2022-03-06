@@ -1,4 +1,5 @@
 const { merge } = require('webpack-merge')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const paths = require('./paths')
@@ -7,7 +8,8 @@ const variables = require('./variables')
 
 module.exports = merge(common, {
   mode: 'production',
-  devtool: false,
+  devtool: 'source-map',
+  stats: 'normal',
   output: {
     path: paths.build,
     publicPath: '/',
@@ -35,6 +37,7 @@ module.exports = merge(common, {
     ],
   },
   plugins: [
+    new BundleAnalyzerPlugin(),
     // Extracts CSS into separate files
     // Note: style-loader is for development
     // MiniCssExtractPlugin is for production
