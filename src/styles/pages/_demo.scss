@@ -6,4 +6,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include max('tablet') {
+    & {
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
 }

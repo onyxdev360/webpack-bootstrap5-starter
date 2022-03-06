@@ -2,6 +2,7 @@
 ///
 /// @group String Helpers
 /// @author https://gist.github.com/jonathantneal
+/// @link https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
 ///
 /// @param {String} $string - The source text string.
 /// @param {String} $search - The token to search for in the source text.
@@ -17,11 +18,7 @@
 
   @if $index {
     @return str-slice($string, 1, $index - 1) + $replace +
-      str-replace(
-        str-slice($string, $index + str-length($search)),
-        $search,
-        $replace
-      );
+      str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
   }
 
   @return $string;

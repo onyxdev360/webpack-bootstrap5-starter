@@ -2,6 +2,7 @@
 ///
 /// @group Font Helpers
 /// @author https://gist.github.com/jonathantneal
+/// @link https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
 ///
 /// @param {String} $name - Name of the font.
 /// @param {String} $path - The path to locate the font.
@@ -11,13 +12,7 @@
 /// @example scss - Import Roboto-Regular font with 400 weight, normal style and .ttf extension
 ///   @include font('Roboto', '../assets/fonts/Roboto/Roboto-Regular', 400, 'normal', 'ttf');
 ///
-@mixin font(
-  $name,
-  $path,
-  $weight: null,
-  $style: null,
-  $exts: eot woff2 woff ttf svg
-) {
+@mixin font($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
   $src: null;
 
   $extmods: (
@@ -31,17 +26,9 @@
   );
 
   @each $ext in $exts {
-    $extmod: if(
-      map-has-key($extmods, $ext),
-      $ext + map-get($extmods, $ext),
-      $ext
-    );
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
     $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-    $src: append(
-      $src,
-      url(quote($path + '.' + $extmod)) format(quote($format)),
-      comma
-    );
+    $src: append($src, url(quote($path + '.' + $extmod)) format(quote($format)), comma);
   }
 
   @font-face {
@@ -49,5 +36,67 @@
     font-style: $style;
     font-weight: $weight;
     src: $src;
+  }
+}
+
+/// Apply a media query.
+///
+/// @group Utilities
+/// @link https://engageinteractive.co.uk/blog/top-10-scss-mixins
+///
+/// @param {String} $width - The width to apply the media query to.
+/// @param {String} $type - min or max to indicate min-width or max-width respectively.
+///
+/// @example scss - Apply a style for max-width tablet
+///   @include mq('tablet', max) {
+///      visibility: hidden
+///   }
+///
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+  }
+
+  @media only screen and (#{$type}-width: $width) {
+    @content;
+  }
+}
+
+/// Apply a max-width media query.
+///
+/// @group Utilities
+/// @link https://engageinteractive.co.uk/blog/top-10-scss-mixins
+///
+/// @param {String} $width - The width to apply the media query to.
+///
+/// @example scss - Apply a style for max-width tablet
+///   @include max('tablet') {
+///      visibility: hidden
+///   }
+///
+@mixin max($width) {
+  @include mq($width, max) {
+    @content;
+  }
+}
+
+/// Apply a min-width media query.
+///
+/// @group Utilities
+/// @link https://engageinteractive.co.uk/blog/top-10-scss-mixins
+///
+/// @param {String} $width - The width to apply the media query to.
+///
+/// @example scss - Apply a style for min-width tablet
+///   @include min('tablet') {
+///      visibility: hidden
+///   }
+///
+@mixin min($width) {
+  @include mq($width, min) {
+    @content;
   }
 }
