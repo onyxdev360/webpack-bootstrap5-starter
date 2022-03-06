@@ -1,10 +1,11 @@
-# Webpack HTML5 Starter
+# Webpack Bootstrap 5 Starter
 
 ## Goals
 
-Provide a simple starting point for creating a HTML 5 project:
+Provide a simple starting point for creating a HTML 5 project using Bootstrap 5 framework:
 
 - ✅ Webpack 5
+- ✅ Bootstrap 5
 - ✅ Linting
 - ✅ TypeScript support
 - ✅ SASS support (7-1 Architecture, sassdoc)
@@ -146,6 +147,10 @@ The project uses a common structure. The `config folder` contains a development 
 [tslint-config-airbnb](https://www.npmjs.com/package/tslint-config-airbnb)
 [tslint-loader](https://www.npmjs.com/package/tslint-loader)
 
+### CSS Frameworks
+
+[bootstrap](https://www.npmjs.com/package/bootstrap)
+
 ### CSS/SASS processing
 
 [css-loader](https://www.npmjs.com/package/css-loader)
@@ -188,7 +193,7 @@ The project uses a common structure. The `config folder` contains a development 
 
 ## Project configuration
 
-The goal of this starter project is to provide a simple starting point for creating an HTML web project using Webpack.
+The goal of this starter project is to provide a simple starting point for creating an HTML web project using Webpack 5 and Bootstrap 5.
 
 In `./src/templates` you will find a sole file `template.html`.
 
@@ -261,6 +266,12 @@ Typescript is supported without any additional changes. See `./src/index.ts` to 
 ### SASS support
 
 Sass is supported in the configuration. Place SASS files in `./src/styles`.
+
+#### SASS and Bootstrap 5
+
+The Bootstrap project makes SASS source files available for distribution. Importing Bootstrap 5 via SASS allows Bootstrap to be used in a web project while allowing you to retain some control over the design. Many developers prefer to use Bootstrap to take advantage of the grid system provided by Bootstrap while ignoring the many additional components provided by Bootstrap. The SASS files required to take that approach are provided in the source files. Simply import `./src/styles/vendors/bootstrap/scss/bootstrap-grid.scss` instead of importing `./src/styles/vendors/bootstrap/scss/bootstrap.scss`. If you started the project using the full Bootstrap, be sure to remove any ceremonial CSS classes that you may have included in your initial design and replace them with your own design classes. The earlier that this decision is made, the less work you have to do later.
+
+> The use of SASS also allows for easier customization of Bootstrap 5. See https://getbootstrap.com/docs/5.0/customize/sass/
 
 #### SASS architecture
 
