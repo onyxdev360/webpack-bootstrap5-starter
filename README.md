@@ -3,10 +3,11 @@
 ## Goals
 
 Provide a simple starting point for an HTML 5 project:
-✅ Webpack 5
-✅ Linting
-✅ Typescript support
-✅ SASS support (7-1 Architecture, sassdoc)
+
+- ✅ Webpack 5
+- ✅ Linting
+- ✅ Typescript support
+- ✅ SASS support (7-1 Architecture, sassdoc)
 
 ## Usage
 
