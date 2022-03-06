@@ -2,7 +2,7 @@
 
 ## Goals
 
-Provide a simple starting point for an HTML 5 project:
+Provide a simple starting point for creating a HTML 5 project:
 
 - ✅ Webpack 5
 - ✅ Linting
@@ -324,7 +324,6 @@ The original webpack configure was inspired by [Tania Rascia](https://www.taniar
 #### Other
 
 [https://gist.github.com/jonathantneal](https://gist.github.com/jonathantneal):
-A useful mixin for importing local fonts. Available [here](https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6)
+A useful mixin for importing local fonts. The mixin is available [here](https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6).
 
-[https://engageinteractive.co.uk/blog/top-10-scss-mixins](https://engageinteractive.co.uk/blog/top-10-scss-mixins)
-The media query (mq) mixin detailed on the site is used in this project with a slight modification and the additional of two media query mixins for applying min-width and max-width explicitly.
+[https://engageinteractive.co.uk/blog/top-10-scss-mixins](https://engageinteractive.co.uk/blog/top-10-scss-mixins): The media query (mq) mixin detailed on the site is used in this project with a slight modification and the additional of two media query mixins for applying min-width and max-width explicitly.
