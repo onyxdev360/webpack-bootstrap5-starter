@@ -1,7 +1,8 @@
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const paths = require('./paths');
-const variables = require('./variables');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const paths = require('./paths')
+const variables = require('./variables')
 
 module.exports = {
   // Where webpack looks to start building the bundle
@@ -18,6 +19,9 @@ module.exports = {
 
   // Customize the webpack build process
   plugins: [
+    // Removes/cleans build folders and unused assets when rebuilding
+    new CleanWebpackPlugin(),
+
     // Copies files from assets to dist/assets
     new CopyWebpackPlugin({
       patterns: [
@@ -71,4 +75,4 @@ module.exports = {
       { test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: 'asset/inline' },
     ],
   },
-};
+}
