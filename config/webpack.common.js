@@ -1,6 +1,7 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const WebpackBar = require('webpackbar')
 const paths = require('./paths')
 const variables = require('./variables')
 
@@ -9,6 +10,8 @@ module.exports = {
   entry: {
     index: paths.src + '/ts/index.ts',
   },
+
+  stats: 'minimal',
 
   // Where webpack outputs the assets and bundles
   output: {
@@ -21,6 +24,8 @@ module.exports = {
   plugins: [
     // Removes/cleans build folders and unused assets when rebuilding
     new CleanWebpackPlugin(),
+
+    new WebpackBar(),
 
     // Copies files from assets to dist/assets
     new CopyWebpackPlugin({
