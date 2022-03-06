@@ -1,14 +1,2 @@
-@include font(
-  'Roboto',
-  '../assets/fonts/Roboto/Roboto-Regular',
-  400,
-  'normal',
-  'ttf'
-);
-@include font(
-  'Roboto-Bold',
-  '../assets/fonts/Roboto/Roboto-Bold',
-  700,
-  'bold',
-  'ttf'
-);
+@include font('Roboto', '../../assets/fonts/Roboto/Roboto-Regular', 400, 'normal', 'ttf');
+@include font('Roboto-Bold', '../../assets/fonts/Roboto/Roboto-Bold', 700, 'bold', 'ttf');

@@ -1,8 +1,8 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = {
   // Asset files
-  assets: path.resolve(__dirname, '../src/assets'),
+  assets: path.resolve(__dirname, '../assets'),
 
   // Source files
   src: path.resolve(__dirname, '../src'),
@@ -12,4 +12,4 @@ module.exports = {
 
   // Static files that get copied to build folder
   public: path.resolve(__dirname, '../assets'),
-};
+}
