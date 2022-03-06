@@ -3,14 +3,14 @@
   color: white;
   background: url('../../assets/img/pexels-pixabay-38537.jpg') center / cover no-repeat fixed;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 
-  @include max('tablet') {
-    & {
-      flex-direction: column;
-      justify-content: space-around;
-    }
-  }
+  // @include max('tablet') {
+  //   & {
+  //     flex-direction: column;
+  //     justify-content: space-around;
+  //   }
+  // }
 }

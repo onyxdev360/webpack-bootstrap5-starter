@@ -20,11 +20,3 @@ a {
 span {
   font-family: Roboto-Bold, Arial, Helvetica, sans-serif;
 }
-
-.mediaQueryExample {
-  display: none;
-
-  @include max('tablet') {
-    display: block;
-  }
-}
