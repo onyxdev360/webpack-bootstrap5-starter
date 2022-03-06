@@ -118,6 +118,74 @@ The project uses a common structure. The `config folder` contains a development 
 │  └─ tslint.json
 ```
 
+## Packages
+
+### Formatting
+
+[prettier](https://www.npmjs.com/package/prettier)
+
+### TypeScript
+
+[typescript](https://www.npmjs.com/package/typescript)
+
+### Linting
+
+#### JS Linting
+
+[eslint](https://www.npmjs.com/package/eslint)
+[eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base)
+[eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier)
+[eslint-import-resolver-webpack](https://www.npmjs.com/package/eslint-import-resolver-webpack)
+[eslint-loader](https://www.npmjs.com/package/eslint-loader)
+[eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)
+[eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier)
+
+#### TS Linting
+
+[tslint](https://www.npmjs.com/package/tslint)
+[tslint-config-airbnb](https://www.npmjs.com/package/tslint-config-airbnb)
+[tslint-loader](https://www.npmjs.com/package/tslint-loader)
+
+### CSS/SASS processing
+
+[css-loader](https://www.npmjs.com/package/css-loader)
+[sass-loader](https://www.npmjs.com/package/sass-loader)
+[style-loader](https://www.npmjs.com/package/style-loader)
+[node-sass](https://www.npmjs.com/package/node-sass)
+[postcss-loader](https://www.npmjs.com/package/postcss-loader)
+[postcss-preset-env](https://www.npmjs.com/package/postcss-preset-env)
+
+### JS transpiling
+
+[babel-loader](https://www.npmjs.com/package/babel-loader)
+[@babel/core](https://www.npmjs.com/package/@babel/core)
+[@babel/plugin-proposal-class-properties](https://www.npmjs.com/package/@babel/plugin-proposal-class-properties)
+[@babel/preset-env](https://www.npmjs.com/package/@babel/preset-env)
+
+### Webpack
+
+#### Core
+
+[webpack](https://www.npmjs.com/package/webpack)
+[webpack-bundle-analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer)
+[webpack-cli](https://www.npmjs.com/package/webpack-cli)
+[webpack-dev-server](https://www.npmjs.com/package/webpack-dev-server)
+
+#### CSS minification
+
+[css-minimizer-webpack-plugin](https://www.npmjs.com/package/css-minimizer-webpack-plugin)
+[mini-css-extract-plugin](https://www.npmjs.com/package/mini-css-extract-plugin)
+
+#### HTML processing
+
+[html-webpack-plugin](https://www.npmjs.com/package/html-webpack-plugin)
+
+#### Utilities
+
+[clean-webpack-plugin](https://www.npmjs.com/package/clean-webpack-plugin)
+[copy-webpack-plugin](https://www.npmjs.com/package/copy-webpack-plugin)
+[webpackbar](https://www.npmjs.com/package/webpackbar)
+
 ## Project configuration
 
 The goal of this starter project is to provide a simple starting point for creating an HTML web project using Webpack.
@@ -137,6 +205,37 @@ new HtmlWebpackPlugin({
   minify: false,
 })
 ```
+
+### Configuration files
+
+- .gitignore - Git ignore file
+- .babelrc.json - Babel configuration
+- .eslintrc.json - eslint configuration
+- .prettierrc.json - prettier configuration
+- postcss.config.js - postcss configuration
+- tsconfig.json - TypeScript configuration
+- tslint.json - tslint configuration
+- package.json - NPM package file
+
+### NPM scripts
+
+- start: build SASS documentation and start Webpack development server
+
+  ```js
+  "start": "sassdoc ./src/styles && cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js"
+  ```
+
+- build: build production distributable files
+
+  ```js
+  "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
+  ```
+
+- sassdoc: build SASS documentation
+
+  ```js
+  "sassdoc": "sassdoc ./src/styles"
+  ```
 
 ### Add additional html files
 
