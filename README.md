@@ -220,7 +220,7 @@ Travis Yeargin <onyxdev360@gmail.com>
 
 #### Webpack configuration
 
-The original webpack configure was inspired [Tania Rascia](https://www.taniarascia.com) and is based on her excellent starter template that is available [here](https://github.com/taniarascia/webpack-boilerplate).
+The original webpack configure was inspired by [Tania Rascia](https://www.taniarascia.com) and is based on her excellent starter template that is available [here](https://github.com/taniarascia/webpack-boilerplate).
 
 #### Other
 
